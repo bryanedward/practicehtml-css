@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open sans';
+}
+
+header{
+    width: 100%;
+    height: 600px;
+    background: #bc4e9c;
+    position: relative;
+    /* fallback for old browsers */
+    background: #FF0099; 
+    /* Chrome 10-25, Safari 5.1-6 */ 
+    background: -webkit-linear-gradient(to right, #493240, #FF0099);  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, hsla(325, 20%, 50%, 0.637), #FF0099), url(./portada.jpg); 
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+
+header .text-header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 430px;
+}
+
+.text-header h1{
+    font-size: 50px;
+    color: #ffff;
+}
+
+.text-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color: #ffff;
+}
+
+.wave{
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+}
+
+/* about us */
+
+.container{
+    padding: 60px 0;
+    margin: auto;
+    overflow: hidden;
+    width: 90%;
+    max-width: 1000px;
+    border: 1px solid black;
+}
+
+main  .information{
+    padding: 30px 0 60px 0;
+    
+}
+
+.title-container{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.container-about-us{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid red;
+}
+
+
+.imagen-about-us{
+    width: 48%;
+}
+
+.container-texts{
+    width: 48%;
+}
+
+.container-texts h3{
+    margin-bottom: 15px;
+}
+
+.container-texts h3 span{
+    background: blue;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px rgb(0, 0, 0.5);
+    margin-right: 5px;
+}
+
+.contenido-texts p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* projects */
+
+.galery-post{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.image-post{
+    width: 24%;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.image-post > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-post:hover .image-hover{
+    transform: scale(1);
+}
+
+.image-hover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(273,91%,27%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-hover img{
+    width: 50px;
+}
+
+.image-hover p{
+    color: #fff;
+}
+
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+   
+    .container-about-us{
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .imagen-about-us{
+           width: 90%;
+       }
+
+    .container-texts{
+        width: 90%;
+    }
+
+    /* projects */
+    .image-post{
+        width: 44%;
+    }
+    
+
+
+    
+    
+}
+
+
+@media screen and (max-width:500px){
+    
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }  
+
+    nav > a{
+        margin-right: 5px;
+    }
+
+    text-header h1{
+        font-size: 35px;
+    }
+
+    text-header h2{
+        font-size: 20px;
+    }
+
+    .image-post{
+        width: 95%;
+    }
+    
+}
+
+
