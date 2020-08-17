@@ -8,15 +8,15 @@
 header{
     width: 100%;
     height: 600px;
-    background: #bc4e9c;
     position: relative;
     /* fallback for old browsers */
-    background: #FF0099; 
+    /* background: #bc4e9c; */
     /* Chrome 10-25, Safari 5.1-6 */ 
-    background: -webkit-linear-gradient(to right, #493240, #FF0099);  
+    /* background: -webkit-linear-gradient(to right, #493240, #FF0099);   */
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, hsla(325, 20%, 50%, 0.637), #FF0099), url(./portada.jpg); 
+    /* background: linear-gradient(to right, hsla(325, 20%, 50%, 0.637), hsla(324, 100%, 50%, 0.424)), url(./profilemario.jpg);  */
     background-size: cover;
+    background-image: url(./profilemario.jpg);
     background-attachment: fixed;
 }
 
@@ -70,12 +70,10 @@ header .text-header{
     overflow: hidden;
     width: 90%;
     max-width: 1000px;
-    border: 1px solid black;
 }
 
 main  .information{
     padding: 30px 0 60px 0;
-    
 }
 
 .title-container{
@@ -87,9 +85,7 @@ main  .information{
 .container-about-us{
     display: flex;
     justify-content: space-evenly;
-    border: 1px solid red;
 }
-
 
 .imagen-about-us{
     width: 48%;
@@ -115,7 +111,7 @@ main  .information{
     margin-right: 5px;
 }
 
-.contenido-texts p{
+.container-texts p{
     padding: 0px 0px 30px 15px;
     font-weight: 300;
     text-align: justify;
@@ -172,6 +168,105 @@ main  .information{
 }
 
 
+
+/* clients */
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards .card{
+    background: #4d0686;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+}
+
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+
+/* about -service */
+
+.service-contant{
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-ind{
+    width: 28%;
+    text-align: center;
+}
+
+.service-ind img{
+    width: 90%;
+}
+
+.service-ind h4{
+    margin: 10px 0;
+}
+
+.service-int p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* footer */
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+}
+
+.container-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+    margin: auto;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #FF0099;
+    margin-bottom: 10px;
+}
+
+.container-footer p{
+    color: #ccc;
+}
+
+.title-end{
+   text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
 @media screen and (max-width:900px){
     header{
         background-position: center;
@@ -192,15 +287,33 @@ main  .information{
         width: 90%;
     }
 
-    /* projects */
+    /* p */
     .image-post{
         width: 44%;
     }
     
 
+    /* services */
 
+    .about-services{
+        padding: 30px;
+        background: #f2f2f2;
+    }
+
+
+    .service-contant{
+        justify-content: center;
+        flex-direction: column;
+    }
     
+    .service-ind{
+        width: 100%;
+        text-align: center;
+    }
     
+    .service-ind:nth-child(1), .service-ind:nth-child(2){
+        margin-bottom: 60px;
+    }
 }
 
 
