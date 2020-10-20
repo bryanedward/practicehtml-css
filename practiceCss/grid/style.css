@@ -1,0 +1,33 @@
+body{
+  padding: 10px;
+}
+
+.grid_container{
+  display: grid;
+  background: #494;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 5px;
+  grid-auto-flow: dense;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid_item{
+  border: 1px solid black;
+  padding: 20px;
+  box-shadow: 1px 2px 4px black;
+}
+
+.grid_item:first-child{
+  background: #904;
+  align-self: start;
+  justify-self: start;
+  order: 10;
+}
+
+.grid_item:nth-child(3){
+  background: #850;
+  place-self: start end;
+  order: 30;
+}
