@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
 }
@@ -8,13 +9,12 @@ body{
 
 /* navegation - header */
 .header{
-  background-image: url(background.jpg);
-  background-repeat: no-repeat;
+  background-image: url(tigre.jpg);
   width: 100%;
   height: 400px;
   background-size: cover;
-  background-position: bottom;
   background-attachment: fixed;
+  background-position-y: 36%;
 }
 
 .nav{
@@ -70,7 +70,7 @@ body{
 /* galeria */
 
 .main-galery{
-  width: 68%;
+  width: 80%;
   margin: auto;
 }
 
@@ -92,4 +92,119 @@ body{
   height: 210px;
   justify-self: center;
   object-fit: cover;
+}
+
+.main-galery-animals img:hover{
+  animation: effectAnimals 1.1s forwards;
+}
+
+@keyframes effectAnimals{
+  100%{
+    transform: scale(1.1);
+  }
+}
+
+/* main coments */
+.main-coments{
+  margin: 6rem 0;
+}
+
+.main-coments h3{
+  margin: 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.comentars-user{
+  display: flex;
+}
+
+.comentars-user  > .coment{
+  margin: 10px;
+  background-color: #faf9f6;
+  padding: 25px 15px;
+  width: 340px;
+  margin: auto;
+  box-shadow: 1px 3px 4px black;
+}
+
+/* footer */
+
+.footer{
+  display: grid;
+  grid-template-rows: 60% 40%;
+  grid-template-columns: 85% 15%;
+  padding: 2em;
+  background: #f8f3e2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #f8f3e2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #f8f3e2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.footer-contacts > p{
+  padding: 5px 0;
+  font-weight: 800;
+}
+
+.footer-socialMedia i{
+  margin: 10px;
+}
+
+.footer-socialMedia i:hover{
+  cursor: pointer;
+  animation: 2s effectAnimals forwards;
+}
+
+/* responsive device */
+
+@media only screen and (max-width: 1024px)
+{
+  .header{
+   background-position: top; 
+   background: url('./elefante.jpg');
+   background-size: cover;
+  }
+
+  .main {
+    display: inline-block;
+  }
+  .main .main-img{
+    text-align: center;
+  }
+
+  .main-galery-animals{
+    grid-template-rows: repeat(2, autto);
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .comentars-user {
+    display: inline;
+  }
+
+  .comentars-user .coment{
+    margin: 4rem auto;
+    width: 28rem;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  
+  .header{
+    background-position-x: 65%;
+  }
+
+  .nav li{
+    font-size: small;
+  }
+  
+  .main-galery-animals{
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  .main-galery-animals img{
+    margin: .3rem 0;
+  }
+
 }
