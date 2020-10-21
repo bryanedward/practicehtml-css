@@ -1,0 +1,33 @@
+.header{
+  background: #9e0;
+  padding: .9rem 0;
+  margin: .3rem 0;  
+}
+
+.header-own{
+  display: inline;
+  /* transition: translate 1s; */
+  transform: scaleY();
+}
+
+.header-info{
+  display: inline;
+  animation-name: info;
+  animation-iteration-count: 1;
+  animation-duration: 2.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+
+}
+
+
+@keyframes info {
+  from{
+    position: relative;
+    left: 0;
+  }
+  to{
+    left: 100px;
+  }
+
+}
